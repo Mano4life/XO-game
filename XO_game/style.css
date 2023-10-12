@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: #183D3D;
+    --background: #5C8374;
+    --hover: #040D12;
+    --title1: #93B1A6;
+    --title2: rgb(255, 255, 255);
+    --border: #183D3D;
+    --border-shadow: #cacaca;
+}
+
+body{
+    background-color: #acacac;
+}
+
+.game{
+    width: 30em;
+    height: 30em;
+    text-align: center;
+    font-family: system-ui;
+    color: var(--title1);
+    margin: 80px auto;
+    font-weight: 500;
+    background-color: var(--background);
+    border: 2px solid var(--border);
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px #cacaca ;
+}
+
+.gamebody{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+    padding: 10px;
+    /* width: 100%; */
+}
+
+.title{
+    background-color: var(--main-color);
+    color: var(--title1);
+    font-weight: 700;
+    font-size: 40px;
+    padding: 5px 0;
+    margin: 10px 10px;
+    border-radius: 25px;
+    height: 5.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+span{
+    color: var(--title2);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.square{
+    /* width: 80px; */
+    height: 2.2em;
+    background-color: var(--main-color);
+    /* margin: 2px; */
+    font-size: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.square:hover{
+    background: var(--hover);
+    cursor: pointer;
+}
+
+@media screen and (max-width:600px) {
+    .game{
+        width: 100%;
+    }
+}
